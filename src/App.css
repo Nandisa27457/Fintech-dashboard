@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    width: 100%;
+}
+
+.layout {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Sidebar styling */
+.sidebar-container {
+    width: 300px;
+    background-color: hsl(36, 22%, 96%);
+    height: 100%;
+}
+
+.main-content {
+    flex: 1;
+    background-color: hsl(0, 0%, 95%);
+    height: 100%;
+}
+
+.main-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, hsl(32, 24%, 55%), hsla(45, 9%, 91%, 0.295));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-left:50px;
+    position:relative;
+    top:30px;
+}
