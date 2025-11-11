@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -22,6 +25,8 @@ body,
     width: 300px;
     background-color: hsl(36, 22%, 96%);
     height: 100%;
+    box-sizing: border-box;
+    border: solid 0.4px rgba(128, 128, 128, 0.27);
 }
 
 .main-content {
@@ -37,14 +42,15 @@ body,
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    margin-left:50px;
+    /* margin-left:50px; */
+    padding:15px;
     position:relative;
     top:30px;
+    border-bottom: 1px solid #cccccc47;
 }
 
 .nav.links{
-  position:relative;
-  top:20px;
+  margin-top: 1000px;
 }
 
 .nav-container{
@@ -54,4 +60,26 @@ body,
   position:relative;
   top:40px;
   left:20px;
+  margin-top:20px; 
+}
+
+footer{
+  margin-top:150px;
+  margin-left:20px;
+  border-top: 1px solid rgba(128, 128, 128, 0.27) ;
+  padding-top: 15px;
+}
+
+.nav-link-titles{
+  font-weight:lighter
+
+}
+
+.footer-content{
+  display: flex;
+  flex-direction: row;
+}
+
+.email{
+  margin-left:20px;
 }
