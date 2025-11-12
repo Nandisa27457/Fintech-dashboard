@@ -3,6 +3,7 @@ import FinflowCard from "../Components/FinFlowCard";
 import Layout from "../Components/Layout";
 import { Calculator, DollarSign, Receipt,ChartNetwork } from "lucide-react";
 
+
 export default function Dashboard() {
     return (
         <>
