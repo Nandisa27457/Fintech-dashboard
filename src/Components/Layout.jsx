@@ -61,6 +61,7 @@ export default function Layout({children}) {
               {/* Main-Container */}
               <div className="body">
                 <h1>DashBoard</h1>
+                <p className="sub-heading">Your final overview at a glance</p>
             <div className="dashboard-container" >
                     {children}
                 </div>
