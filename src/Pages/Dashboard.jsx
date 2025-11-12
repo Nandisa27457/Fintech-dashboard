@@ -1,7 +1,7 @@
 import React from "react";
 import FinflowCard from "../Components/FinFlowCard";
 import Layout from "../Components/Layout";
-import { DollarSign, Receipt } from "lucide-react";
+import { Calculator, DollarSign, Receipt,Calculator,ChartNetwork } from "lucide-react";
 
 export default function Dashboard() {
     return (
@@ -27,7 +27,7 @@ export default function Dashboard() {
                 </div>
                 <div className="VAT Payable">
                     <FinflowCard title="VAT Payable ">
-                        <Receipt />
+                        <Calculator />
                         <p className="vat-amt">R25 0000</p>
                         <p className="due-date"style={{ color: "grey", marginTop: "0.25rem" }}>
                             due in 20 days
@@ -36,7 +36,7 @@ export default function Dashboard() {
                 </div>
                 <div className="Net Profit">
                     <FinflowCard title="Net Profit">
-                        <Receipt />
+                        <ChartNetwork />
                         <p className="vat-amt">R574 580</p>
                         <p className="due-date"style={{ color: "green", marginTop: "0.25rem" }}>
                             18.2% profit margin
