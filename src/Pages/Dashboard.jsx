@@ -1,12 +1,13 @@
 import React from "react";
 import FinflowCard from "../Components/FinFlowCard";
 import Layout from "../Components/Layout";
-import { Calculator, DollarSign, Receipt,Calculator,ChartNetwork } from "lucide-react";
+import { Calculator, DollarSign, Receipt,ChartNetwork } from "lucide-react";
 
 export default function Dashboard() {
     return (
         <>
             <Layout>
+                <div className="card-container">
                 <div className="Revenue">
                     <FinflowCard title="Total Revenue">
                         <DollarSign />
@@ -25,7 +26,7 @@ export default function Dashboard() {
                         </p>
                     </FinflowCard>
                 </div>
-                <div className="VAT Payable">
+                <div className="VAT">
                     <FinflowCard title="VAT Payable ">
                         <Calculator />
                         <p className="vat-amt">R25 0000</p>
@@ -34,7 +35,7 @@ export default function Dashboard() {
                         </p>
                     </FinflowCard>
                 </div>
-                <div className="Net Profit">
+                <div className="Profit">
                     <FinflowCard title="Net Profit">
                         <ChartNetwork />
                         <p className="vat-amt">R574 580</p>
@@ -42,6 +43,7 @@ export default function Dashboard() {
                             18.2% profit margin
                         </p>
                     </FinflowCard>
+                </div>
                 </div>
             </Layout>
         </>
