@@ -1,62 +1,71 @@
 import React from "react";
 import { Home, Settings, User, BookOpen,NotepadText,CreditCard,Receipt,DollarSign,Repeat2,ChartNetwork,Calculator } from "lucide-react";
 
-export default function Layout() {
+export default function Layout({children}) {
     return (
         <>
+        <div className="main-container">
             <div className="sidebar-container">
                 <h1 className="main-heading">Finflow</h1>
-                
+
                 <nav className="nav-links">
                     <div className="nav-container"> 
                     <Home size={24} />
-                    <h2>Dashboard</h2>
+                    <h2 className ="nav-link-titles">Dashboard</h2>
                     </div>
                     <div className="nav-container">
                     <NotepadText/>
-                    <h2>Entries</h2>
+                    <h2 className ="nav-link-titles">Entries</h2>
                     </div>
                     <div className="nav-container">
                     <BookOpen/>
-                    <h2>Charts of Accounts</h2>
+                    <h2 className ="nav-link-titles">Charts of Accounts</h2>
                     </div>
                     <div className="nav-container">
                     <CreditCard/>
-                    <h2>Payments</h2>
+                    <h2 className ="nav-link-titles">Payments</h2>
                     </div>
                     <div className="nav-container">
                     <Receipt/>
-                    <h2>Invoices</h2>
+                    <h2 className ="nav-link-titles">Invoices</h2>
                     </div>
                     <div className="nav-container">
                     <DollarSign/>
-                    <h2>Billings</h2>
+                    <h2 className ="nav-link-titles">Billings</h2>
                     </div>
                     <div className="nav-container">
                    <Repeat2/>
-                    <h2>Reconciliation</h2>
+                    <h2 className ="nav-link-titles">Reconciliation</h2>
                     </div>
                     <div className="nav-container">
                     <ChartNetwork/>
-                    <h2>Reports</h2>
+                    <h2 className ="nav-link-titles">Reports</h2>
                     </div>
                     <div className="nav-container">
                     <Calculator/>
-                    <h2>VAT</h2>
+                    <h2 className ="nav-link-titles">VAT</h2>
                     </div>
                     <div className="nav-container">
                     <Settings/>
-                    <h2>Settings</h2>
+                    <h2 className ="nav-link-titles">Settings</h2>
                     </div>
                 </nav>
                 <footer>
-                    <span>
+                    <span className="footer-content">
                     <User/>
                     <p>Jane Doe</p>
-                    <p>jane.doe@finflow.com</p>
                     </span>
+                    <p className="email">jane.doe@finflow.com</p>
                 </footer>
             </div>
+              {/* Main-Container */}
+              <div className="body">
+                <h1>DashBoard</h1>
+            <div className="dashboard-container" >
+                    {children}
+                </div>
+                </div>
+                </div>
         </>
     );
 }

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Layout from './Components/Layout'
+import Dashboard from './Pages/Dashboard'
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
 
   return (
     <>
-    <Layout/>
+    <Dashboard/>
     </>
   )
 }
