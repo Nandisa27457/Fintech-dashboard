@@ -13,18 +13,19 @@ import {
     Calculator,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import NavItem from "./NavItem";
 
 const navLinks = [
     { icon: <Home />, title: "Dashboard", path: "/" },
     { icon: <NotepadText />, title: "Entries", path: "/Entries" },
-    { icon: <BookOpen />, title: "Chart of Accounts", link: "/accounts" },
-    { icon: <CreditCard />, title: "Payments", link: "/payments" },
-    { icon: <Receipt />, title: "Invoices", path: "/" },
-    { icon: <DollarSign />, title: "Billings", path: "/" },
-    { icon: <Repeat2 />, title: "Reconciliations", path: "/" },
-    { icon: <ChartNetwork />, title: "Reports", path: "/" },
-    { icon: <Calculator />, title: "VAT", path: "/" },
-    { icon: <Settings />, title: "Settings", path: "/" },
+    { icon: <BookOpen />, title: "Chart of Accounts", path: "/accounts" },
+    { icon: <CreditCard />, title: "Payments", path: "/payments" },
+    { icon: <Receipt />, title: "Invoices", path: "/invoices" },
+    { icon: <DollarSign />, title: "Billings", path: "/billings" },
+    { icon: <Repeat2 />, title: "Reconciliations", path: "/recon" },
+    { icon: <ChartNetwork />, title: "Reports", path: "/reports" },
+    { icon: <Calculator />, title: "VAT", path: "/VAT" },
+    { icon: <Settings />, title: "Settings", path: "/settings" },
 ];
 
 export default function Layout({ children }) {
@@ -36,13 +37,12 @@ export default function Layout({ children }) {
 
                     <nav className="nav-container">
                         {navLinks.map((navItem, index) => (
-                            <Link
-                                className="nav-links"
-                                to={navItem.path}
-                                key={index}>
-                                {navItem.icon}
-                                <h2>{navItem.title}</h2>
-                            </Link>
+                            <NavItem
+                                key={index}
+                                icon={NavItem.icon}
+                                title={navItem.title}
+                                path={navItem.path}
+                            />
                         ))}
                     </nav>
                     <footer>
