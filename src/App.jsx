@@ -1,17 +1,16 @@
-import { useState } from 'react'
-import './App.css'
-import Layout from './Components/Layout'
-import Dashboard from './Pages/Dashboard'
-
+import { useState } from "react";
+import "./App.css";
+import Layout from "./Components/Layout";
+import Dashboard from "./Pages/Dashboard";
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [count, setCount] = useState(0);
 
-  return (
-    <>
-    <Dashboard/>
-    </>
-  )
+    return (
+        <>
+            <Dashboard />
+        </>
+    );
 }
 
-export default App
+export default App;
