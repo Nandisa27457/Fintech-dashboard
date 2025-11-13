@@ -11,21 +11,20 @@ import {
     Repeat2,
     ChartNetwork,
     Calculator,
-    Link,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const navLinks = [
-    { icon: <Home />, title: "Dashboard", link: "/" },
-    { icon: <NotepadText />, title: "Entries", link: "/Entries" },
+    { icon: <Home />, title: "Dashboard", path: "/" },
+    { icon: <NotepadText />, title: "Entries", path: "/Entries" },
     { icon: <BookOpen />, title: "Chart of Accounts", link: "/accounts" },
     { icon: <CreditCard />, title: "Payments", link: "/payments" },
-    { icon: <Receipt />, title: "Invoices", link: "/" },
-    { icon: <DollarSign />, title: "Billings", link: "/" },
-    { icon: <Repeat2 />, title: "Reconciliations", link: "/" },
-    { icon: <ChartNetwork />, title: "Reports", link: "/" },
-    { icon: <Calculator />, title: "VAT", link: "/" },
-    { icon: <Settings />, title: "Settings", link: "/" },
+    { icon: <Receipt />, title: "Invoices", path: "/" },
+    { icon: <DollarSign />, title: "Billings", path: "/" },
+    { icon: <Repeat2 />, title: "Reconciliations", path: "/" },
+    { icon: <ChartNetwork />, title: "Reports", path: "/" },
+    { icon: <Calculator />, title: "VAT", path: "/" },
+    { icon: <Settings />, title: "Settings", path: "/" },
 ];
 
 export default function Layout({ children }) {
@@ -39,7 +38,7 @@ export default function Layout({ children }) {
                         {navLinks.map((navItem, index) => (
                             <Link
                                 className="nav-links"
-                                to={navItem.link}
+                                to={navItem.path}
                                 key={index}>
                                 {navItem.icon}
                                 <h2>{navItem.title}</h2>
