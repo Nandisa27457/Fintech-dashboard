@@ -12,8 +12,8 @@ import {
     ChartNetwork,
     Calculator,
 } from "lucide-react";
-import { Link } from "react-router-dom";
 import NavItem from "./NavItem";
+import UserCard from "./UserCard";
 
 const navLinks = [
     { icon: <Home />, title: "Dashboard", path: "/" },
@@ -46,11 +46,7 @@ export default function Layout({ children }) {
                         ))}
                     </nav>
                     <footer>
-                        <span className="footer-content">
-                            <User />
-                            <p>Jane Doe</p>
-                        </span>
-                        <p className="email">jane.doe@finflow.com</p>
+                        <UserCard/>
                     </footer>
                 </div>
                 {/* Main-Container */}
