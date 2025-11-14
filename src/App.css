@@ -87,7 +87,9 @@ footer{
   display: flex;
   flex-direction: row;
 }
-
+.Username{
+  margin-left:20px; 
+}
 /* 
 =====================
 Dashboard Stylings
