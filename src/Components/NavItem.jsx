@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button, Box } from "@mui/material";
+import { Button} from "@mui/material";
+
 
 export default function NavItem({ icon, path, title }) {
     return (
         <Button
             component={Link}
             to={path}
+            startIcon ={icon}
             sx={{
                 color: "black",
                 justifyContent: "flex-start",
@@ -20,6 +22,7 @@ export default function NavItem({ icon, path, title }) {
                     textDecoration: "none",
                 },
             }}>
+            
             {title}
         </Button>
     );

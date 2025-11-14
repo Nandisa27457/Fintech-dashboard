@@ -1,31 +1,28 @@
 import React from "react";
-import {
-    Home,
-    Settings,
-    User,
-    BookOpen,
-    NotepadText,
-    CreditCard,
-    Receipt,
-    DollarSign,
-    Repeat2,
-    ChartNetwork,
-    Calculator,
-} from "lucide-react";
 import NavItem from "./NavItem";
 import UserCard from "./UserCard";
+import AddHomeOutlinedIcon from '@mui/icons-material/AddHomeOutlined';
+import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
+import ImportContactsOutlinedIcon from '@mui/icons-material/ImportContactsOutlined';
+import CreditCardOutlinedIcon from '@mui/icons-material/CreditCardOutlined';
+import ReceiptLongOutlinedIcon from '@mui/icons-material/ReceiptLongOutlined';
+import AttachMoneyOutlinedIcon from '@mui/icons-material/AttachMoneyOutlined';
+import LoopOutlinedIcon from '@mui/icons-material/LoopOutlined';
+import TimelineOutlinedIcon from '@mui/icons-material/TimelineOutlined';
+import CalculateOutlinedIcon from '@mui/icons-material/CalculateOutlined';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 
 const navLinks = [
-    { icon: <Home />, title: "Dashboard", path: "/" },
-    { icon: <NotepadText />, title: "Entries", path: "/Entries" },
-    { icon: <BookOpen />, title: "Chart of Accounts", path: "/accounts" },
-    { icon: <CreditCard />, title: "Payments", path: "/payments" },
-    { icon: <Receipt />, title: "Invoices", path: "/invoices" },
-    { icon: <DollarSign />, title: "Billings", path: "/billings" },
-    { icon: <Repeat2 />, title: "Reconciliations", path: "/recon" },
-    { icon: <ChartNetwork />, title: "Reports", path: "/reports" },
-    { icon: <Calculator />, title: "VAT", path: "/VAT" },
-    { icon: <Settings />, title: "Settings", path: "/settings" },
+    { icon: <AddHomeOutlinedIcon />, title: "Dashboard", path: "/" },
+    { icon: < DescriptionOutlinedIcon/>, title: "Entries", path: "/Entries" },
+    { icon: <ImportContactsOutlinedIcon />, title: "Chart of Accounts", path: "/accounts" },
+    { icon: <CreditCardOutlinedIcon />, title: "Payments", path: "/payments" },
+    { icon: < ReceiptLongOutlinedIcon/>, title: "Invoices", path: "/invoices" },
+    { icon: < AttachMoneyOutlinedIcon/>, title: "Billings", path: "/billings" },
+    { icon: <LoopOutlinedIcon />, title: "Reconciliations", path: "/recon" },
+    { icon: < TimelineOutlinedIcon/>, title: "Reports", path: "/reports" },
+    { icon: < CalculateOutlinedIcon/>, title: "VAT", path: "/VAT" },
+    { icon: < SettingsOutlinedIcon/>, title: "Settings", path: "/settings" },
 ];
 
 export default function Layout({ children }) {
@@ -39,7 +36,7 @@ export default function Layout({ children }) {
                         {navLinks.map((navItem, index) => (
                             <NavItem
                                 key={index}
-                                icon={NavItem.icon}
+                                icon={navItem.icon}
                                 title={navItem.title}
                                 path={navItem.path}
                             />
